@@ -12,7 +12,7 @@ function App() {
 				<Search/>
 			</header>
 			<section>
-
+				<AmiiboList />
 			</section>
     </div>
   );
