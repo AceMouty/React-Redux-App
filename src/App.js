@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
+// Components
 import Search from './components/Serach';
+import AmiiboList from './components/AmiiboList';
 
 function App() {
   return (
     <div className="App">
-			<section>
+			<header>
 				<h1>Hello Amiibo!</h1>
 				<Search/>
+			</header>
+			<section>
+
 			</section>
-      
     </div>
   );
 }

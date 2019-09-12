@@ -8,13 +8,14 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
+	console.log("FROM THE REDUCER, YOUR ACTION IS: ", action)
 	switch(action.type) {
-		// case FETCHING_AMIIBO_START: 
-		// return {
-		// 	...state,
-		// 	isFetching: true,
-		// 	error: ""
-		// }
+		case FETCHING_AMIIBO_START: 
+		return {
+			...state,
+			isFetching: true,
+			error: ""
+		}
 		default:
 			return state;
 	}
