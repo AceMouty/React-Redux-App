@@ -9,10 +9,18 @@ import { getAmiibo } from '../store/actions'
 
 function AmiiboList({getAmiibo, amiiboData, isFetching, error}) {
 	// Run a request when the component mounts
-	// useEffect(() => {
-	// 	getAmiibo()
-	// }, [getAmiibo])
+	useEffect(() => {
+		getAmiibo()
+	}, [getAmiibo])
 
+	// Conditional Render
+	if(!isFetching){
+		return (
+			<React.Fragment>
+				<h1>Loading</h1>
+			</React.Fragment>
+		)
+	}
 	return(
 		<React.Fragment>
 			{amiiboData.map(character =>  <Amiibo key={uuid()} character={character}/>)}
