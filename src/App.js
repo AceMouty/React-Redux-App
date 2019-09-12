@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 			<header>
 				<h1>Hello Amiibo!</h1>
-				<Search/>
+				{/* <Search/> */}
 			</header>
 			<section>
 				<AmiiboList />

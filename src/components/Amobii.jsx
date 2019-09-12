@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Amobii(){
+function Amobii({character}){
 	return(
-		<h1>Hello from the Amobii Component</h1>
+		<h1>Hello from Amobii</h1>
 	)
 }
 
