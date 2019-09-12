@@ -2,7 +2,7 @@
 import { FETCHING_AMIIBO_START, FETCHING_AMIIBO_END, FETCHING_AMIIBO_ERR} from '../actions';
 
 const initialState = {
-	amobiiData: [
+	amiiboData: [
 		{
 			amiiboSeries: "Super Smash Bros.",
 			character: "Mario",

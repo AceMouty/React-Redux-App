@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import uuid from 'uuid/v1';
 // Component
-import Amobii from './Amobii';
+import Amiibo from './Amiibo';
 // Bring in connect to connect to the store
 import { connect } from 'react-redux'
 // Pull in the action creator
 import { getAmiibo } from '../store/actions'
 
-function AmiiboList({getAmiibo, amobiiData, isFetching, error}) {
+function AmiiboList({getAmiibo, amiiboData, isFetching, error}) {
 	// Run a request when the component mounts
 	// useEffect(() => {
 	// 	getAmiibo()
@@ -15,14 +15,14 @@ function AmiiboList({getAmiibo, amobiiData, isFetching, error}) {
 
 	return(
 		<React.Fragment>
-			{amobiiData.map(character =>  <Amobii key={uuid()} character={character}/>)}
+			{amiiboData.map(character =>  <Amiibo key={uuid()} character={character}/>)}
 		</React.Fragment>
 	)
 }
 
 const mapStateToProps = state => {
 	return {
-		amobiiData: state.amobiiData,
+		amiiboData: state.amiiboData,
 		isFetching: state.isFetching,
 		error: state.error
 	}
