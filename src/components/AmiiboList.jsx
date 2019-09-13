@@ -17,7 +17,7 @@ function AmiiboList({getAmiibo, amiiboData, isFetching, error}) {
 	if(!amiiboData){
 		return (
 			<React.Fragment>
-				<h1>Loading</h1>
+				<h1 className="loading">Loading</h1>
 			</React.Fragment>
 		)
 	}

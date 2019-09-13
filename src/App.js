@@ -8,10 +8,12 @@ function App() {
   return (
     <div className="App">
 			<header>
-				<h1>Hello Amiibo!</h1>
-				<Search/>
+				<div className="headerContent">
+					<h1>Hello Amiibo!</h1>
+					<Search/>
+				</div>
 			</header>
-			<section>
+			<section className="amiibo-container">
 				<AmiiboList />
 			</section>
     </div>

@@ -20,7 +20,7 @@ function Search({getAmiibo}) {
 	}
 
 	return (
-		<form onSubmit={submitHandler}>
+		<form onSubmit={submitHandler} className="amiiboForm">
 			<input 
 				type="text"
 				placeholder="Search an Amiibo"
