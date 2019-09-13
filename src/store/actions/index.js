@@ -15,8 +15,8 @@ export const getAmiibo = amiiboName => dispatch => {
 		console.log("MADE IT INTO THE IF");
 		axios('https://www.amiiboapi.com/api/amiibo/')
 		.then(res => {
-			console.log(res)
-			return {type: FETCHING_AMIIBO_END, payload: res.data}
+			console.log("FROM THE AXIOS THEN", res)
+			 dispatch({type: FETCHING_AMIIBO_END, payload: res.data.amiibo})
 		})
 		.catch(err => console.log(err))
 	} else {

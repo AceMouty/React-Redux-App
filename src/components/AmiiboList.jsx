@@ -14,7 +14,7 @@ function AmiiboList({getAmiibo, amiiboData, isFetching, error}) {
 	}, [getAmiibo])
 
 	// Conditional Render
-	if(!isFetching){
+	if(!amiiboData){
 		return (
 			<React.Fragment>
 				<h1>Loading</h1>
