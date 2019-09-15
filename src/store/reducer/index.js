@@ -1,5 +1,5 @@
 // Bring in Action varibales
-import { FETCHING_AMIIBO_START, FETCHING_AMIIBO_END, FETCHING_AMIIBO_ERR} from '../actions';
+import { FETCHING_AMIIBO_START, FETCHING_AMIIBO_END} from '../actions';
 
 const initialState = {
 	amiiboData: null,
@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
-	console.log("FROM THE REDUCER, YOUR ACTION IS: ", action)
+	// console.log("FROM THE REDUCER, YOUR ACTION IS: ", action)
 	switch(action.type) {
 		case FETCHING_AMIIBO_START: 
 			return {
@@ -17,7 +17,7 @@ export const reducer = (state = initialState, action) => {
 				error: ""
 			}
 		case FETCHING_AMIIBO_END:
-			console.log("MADE IT TO THE END");
+			// console.log("MADE IT TO THE END");
 			return {
 				...state,
 				isFetching: false,

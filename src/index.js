@@ -8,11 +8,10 @@ import { Provider } from 'react-redux';
 import { reducer } from './store/reducer';
 // Middleware
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
 
 // Setting up the store and also composeEnhancers is for redux tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, logger)));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
 	<Provider store={store}>
