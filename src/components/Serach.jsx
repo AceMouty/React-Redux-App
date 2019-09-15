@@ -8,14 +8,14 @@ function Search({getAmiibo}) {
 	const [amiiboText, setAmiiboText] = useState("");
 
 	const changeHandler = e => {
-		console.log(e.target.value)
+		// console.log(e.target.value);
 		setAmiiboText(e.target.value);
 	}
 	
 	const submitHandler = e => {
 		e.preventDefault()
 		// Call dispatcher here to search for an amiibo and pass in amiiboText state to the dispatcher
-		console.log(amiiboText.toLocaleLowerCase())
+		// console.log(amiiboText.toLocaleLowerCase())
 		getAmiibo(amiiboText.toLocaleLowerCase())
 	}
 
